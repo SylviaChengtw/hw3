@@ -9,7 +9,9 @@ list.data <- list()
 #設立for 迴圈以讀取資料
 for (i in 1:length(list.filenames)){
    list.data[[i]] <- read.table(list.filenames[i], header = TRUE, sep=" ", fill=TRUE)
+  ls(pattern = "*")
+   rm(list=ls("*"))
 }
-list.filenames[list.filenames$"*" <- NULL]
+ 
 names(list.data) <- list.filenames
 list.data[2]
